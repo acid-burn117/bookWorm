@@ -5,9 +5,7 @@ e-commerce web application for video games. This application is built using Reac
 ## Table of Conents
 * [Installation](#installation)
 * [Usage](#usage)
-*
 * [License](#license)
-
 * [Contribution](#contribution)
 * [Tests](*tests)
 * [Questions](*questions)
@@ -40,5 +38,5 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly or any of the other authors at osoriodouglas19@gmail.com, knoxtitus@gmail.com, wy.smith722@gmail.com, rc9525@gmail.com . You can find more of my work at [acid-burn117](https://github.com/acid-burn117/).
+If you have any questions about the repo, open an issue or contact me directly or any of the other authors at osoriodouglas19@gmail.com, wy.smith722@gmail.com, rc9525@gmail.com . You can find more of my work at [acid-burn117](https://github.com/acid-burn117/).
 
