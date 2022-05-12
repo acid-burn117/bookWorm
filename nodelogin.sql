@@ -1,3 +1,5 @@
+DROP DATABASE `nodelogin`;
+
 CREATE DATABASE IF NOT EXISTS `nodelogin` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `nodelogin`;
 
@@ -17,9 +19,10 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `role`, `activation_code`, `rememberme`, `reset`, `registered`, `last_seen`, `tfa_code`, `ip`) VALUES
-(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin@example.com', 'Admin', 'activated', '', '', '2022-01-11 17:30:11', '2022-02-01 19:10:30', '', ''),
-(2, 'member', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'member@example.com', 'Member', 'activated', '', '', '2022-01-11 17:30:11', '2022-01-12 19:47:11', '', '');
+INSERT INTO `accounts` ( `username`, `password`, `email`, `role`, `activation_code`, `rememberme`, `reset`, `registered`, `last_seen`, `tfa_code`, `ip`) VALUES
+( 'admin', 'admin', 'admin@example.com', 'Admin', 'activated', '', '', '2022-01-11 17:30:11', '2022-02-01 19:10:30', '', ''),
+( 'member', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'member@example.com', 'Member', 'activated', '', '', '2022-01-11 17:30:11', '2022-01-12 19:47:11', '', '');
+
 
 CREATE TABLE IF NOT EXISTS `login_attempts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -38,13 +41,13 @@ CREATE TABLE IF NOT EXISTS `settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
-INSERT INTO `settings` (`id`, `setting_key`, `setting_value`, `category`) VALUES
-(1, 'account_activation', 'false', 'General'),
-(2, 'mail_from', 'Your Company Name <noreply@yourdomain.com>', 'General'),
-(3, 'csrf_protection', 'false', 'Add-ons'),
-(4, 'brute_force_protection', 'false', 'Add-ons'),
-(5, 'twofactor_protection', 'false', 'Add-ons'),
-(6, 'auto_login_after_register', 'false', 'Registration'),
-(7, 'recaptcha', 'false', 'reCAPTCHA'),
-(8, 'recaptcha_site_key', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', 'reCAPTCHA'),
-(9, 'recaptcha_secret_key', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe', 'reCAPTCHA');
+INSERT INTO `settings` (`setting_key`, `setting_value`, `category`) VALUES
+('account_activation', 'false', 'General'),
+('mail_from', 'Your Company Name <noreply@yourdomain.com>', 'General'),
+('csrf_protection', 'false', 'Add-ons'),
+('brute_force_protection', 'false', 'Add-ons'),
+('twofactor_protection', 'false', 'Add-ons'),
+('auto_login_after_register', 'false', 'Registration'),
+('recaptcha', 'false', 'reCAPTCHA'),
+('recaptcha_site_key', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', 'reCAPTCHA'),
+('recaptcha_secret_key', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe', 'reCAPTCHA');
